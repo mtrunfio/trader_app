@@ -1,0 +1,9 @@
+{% if exchange_list %}
+    <ul>
+        {% for exchange in exchange_list %}
+            <li><a href="{% url 'exchanges:detail' exchange.id %}">{{exchange.exchange_name}}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma exchange cadastrada</p>
+{% endif %}
