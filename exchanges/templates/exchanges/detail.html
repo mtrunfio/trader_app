@@ -1,0 +1,7 @@
+<h1>{{ exchange.exchange_name }}</h1>
+<ul>
+    <li>{{ exchange.api_key }}</li>
+    <li>{{ exchange.secret }}</li>
+</ul>
+
+<a href="{% url 'exchanges:index' %}">back</a>
