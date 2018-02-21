@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# t3.py
+# @Author : Mauricio Trunfio (omnipumbs@gmail.com)
+# @Link   : https://github.com/mtrunfio
+# @Date   : 2/21/2018, 3:54:12 PM
+
 from django.db import models
 
 
@@ -12,7 +20,7 @@ class Exchange(models.Model):
     def add_exchange(self, exchange_name, api_key, secret):
         try:
             if(exchange_name == ""):
-                return "error", "Exchange name is required"
+                return dict(statuscode = 0x1001, message = "Exchange name is required")
 
             if(api_key == ""):
                 return 'error', 'API Key is required'

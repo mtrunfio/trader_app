@@ -9,6 +9,13 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# t3.py
+# @Author : Mauricio Trunfio (omnipumbs@gmail.com)
+# @Link   : https://github.com/mtrunfio
+# @Date   : 2/21/2018, 3:54:12 PM
 
 import os
 
@@ -31,6 +38,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'dashboard.apps.DashboardConfig',
     'exchanges.apps.ExchangesConfig',
     'django.contrib.admin',
     'django.contrib.auth',

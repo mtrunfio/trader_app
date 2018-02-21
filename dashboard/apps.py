@@ -9,5 +9,5 @@
 from django.apps import AppConfig
 
 
-class ExchangesConfig(AppConfig):
-    name = 'exchanges'
+class DashboardConfig(AppConfig):
+    name = 'dashboard'

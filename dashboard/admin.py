@@ -6,8 +6,6 @@
 # @Link   : https://github.com/mtrunfio
 # @Date   : 2/21/2018, 3:54:12 PM
 
-from django.apps import AppConfig
+from django.contrib import admin
 
-
-class ExchangesConfig(AppConfig):
-    name = 'exchanges'
+# Register your models here.

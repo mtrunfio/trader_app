@@ -6,8 +6,11 @@
 # @Link   : https://github.com/mtrunfio
 # @Date   : 2/21/2018, 3:54:12 PM
 
-from django.apps import AppConfig
+from django.urls import path
 
+from . import views
 
-class ExchangesConfig(AppConfig):
-    name = 'exchanges'
+urlpatterns = [
+    #/dashboard/
+    path("", views.index, name='index'),
+]
