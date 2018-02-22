@@ -6,9 +6,9 @@
 # @Link   : https://github.com/mtrunfio
 # @Date   : 2/21/2018, 3:54:12 PM
 
-from django.views.generic.base import TemplateView
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
 
-
-class HomeView(TemplateView):
-
-    template_name = 'index.html'
+def index(request):
+    return HttpResponse("Ola Mundo")

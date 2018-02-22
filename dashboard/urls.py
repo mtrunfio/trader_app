@@ -6,11 +6,13 @@
 # @Link   : https://github.com/mtrunfio
 # @Date   : 2/21/2018, 3:54:12 PM
 
-from django.urls import path
+from django.conf.urls import include, url
+from django.contrib import admin
 
 from . import views
 
 urlpatterns = [
     #/dashboard/
-    path("", views.index, name='index'),
+    url(r'^$', views.HomeView.as_view(), name='home'),
+    #path("", views.index, name='index'),
 ]
