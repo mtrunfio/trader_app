@@ -216,7 +216,7 @@
         chart1.series[1].addPoint(generateNumber(50, 150), true, true);
         chart2.series[0].addPoint(generateNumber(), true, true);
         chart2.series[1].addPoint(generateNumber(50, 150), true, true);
-      }, 1000);
+      }, 60000);
       
       
     
