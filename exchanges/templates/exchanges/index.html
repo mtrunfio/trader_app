@@ -1,9 +1,36 @@
+<!DOCTYPE html>
+<!--
+@File   : index.html
+@Author : Mauricio Trunfio ({__email})
+@Link   : https://github.com/mtrunfio
+@Date   : 2/26/2018, 9:42:18 PM
+-->
+{% extends "base.html" %} {% block content %}
+
 {% if exchange_list %}
-    <ul>
-        {% for exchange in exchange_list %}
-            <li><a href="{% url 'exchanges:detail' exchange.id %}">{{exchange.exchange_name}}</a></li>
-        {% endfor %}
-    </ul>
+<table class="display" id="dt1">
+        <thead>
+            <tr>
+            <th>Exchange Name</th>
+            <th>API Key</th>
+            <th>Secret</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exchange in exchange_list %}
+                <tr class="odd gradeX">
+                    <td>{{exchange.exchange_name}}</td>
+                    <td>{{exchange.api_key}}</td>
+                    <td>{{exchange.Secret}}</td>
+                    <td class="center"><a href="{% url 'exchanges:detail' exchange.id %}">details</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% else %}
     <p>Nenhuma exchange cadastrada</p>
 {% endif %}
+
+
+{% endblock content %}
