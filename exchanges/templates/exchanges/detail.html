@@ -1,7 +1,29 @@
-<h1>{{ exchange.exchange_name }}</h1>
+<h1>Exchange Details</h1>
 <ul>
-    <li>{{ exchange.api_key }}</li>
-    <li>{{ exchange.secret }}</li>
+    <li>
+        <p>Exchange Name: {{ exchange.exchange_name }}</p>
+    </li>
+    <li>
+        <p>API Key: {{ exchange.api_key }}</p>
+    </li>
+    <li>
+        <p>API Secret: {{ exchange.secret }}</p>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <label to="exchangename">Exchange Name</label>
+        <input type="text" id="exchangename" value="{{ exchange.exchange_name }}" />
+    </li>
+    <li>
+        <label to="apikey">API Key</label>
+        <input type="text" id="apikey" value="{{ exchange.api_key }}" />
+    </li>
+    <li>
+        <label to="secret">API Secret</label>
+        <input type="text" id="secret" value="{{ exchange.secret }}" />
+    </li>
 </ul>
 
 <a href="{% url 'exchanges:index' %}">back</a>

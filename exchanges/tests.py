@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# t3.py
+# @Author : Mauricio Trunfio (omnipumbs@gmail.com)
+# @Link   : https://github.com/mtrunfio
+# @Date   : 2/21/2018, 3:54:12 PM
+
 from django.test import TestCase
 from exchanges.models import Exchange
 
@@ -27,7 +35,7 @@ class ExchangeModelTests(TestCase):
         api_key = "Testing"
         secret = "Testing"
         new_exchange = self.app.add_exchange(exchange_name, api_key, secret)
-        self.assertIn(new_exchange[0], "error")
+        self.assertEqual(new_exchange["statuscode"], 0x1001)
 
     def test_add_exchange_empty_api(self):
         """
