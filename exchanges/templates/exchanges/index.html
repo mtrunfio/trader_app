@@ -6,7 +6,18 @@
 @Date   : 2/26/2018, 9:42:18 PM
 -->
 {% extends "base.html" %} {% block content %}
+{% load staticfiles %}
+<!-- DATA TABLE CSS -->
+<link href="{% static "css/table.css" %}" rel="stylesheet">
 
+<!-- DataTables Initialization -->
+<script type="text/javascript" src="{% static "js/datatables/jquery.dataTables.js" %}"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+    $('#dt1').dataTable();
+} );
+</script>
+<a href=""> + Add Exchange API</a>
 {% if exchange_list %}
 <table class="display" id="dt1">
         <thead>
@@ -29,7 +40,7 @@
         </tbody>
     </table>
 {% else %}
-    <p>Nenhuma exchange cadastrada</p>
+    <p>You don't have any exchanges yet.</p>
 {% endif %}
 
 
